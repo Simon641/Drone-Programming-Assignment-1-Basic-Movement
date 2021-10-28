@@ -1,16 +1,28 @@
 from djitellopy import Tello
+from time import sleep
 
 tello = Tello()
 
-tello.connect()
-tello.takeoff()
+tello.connect() 
+
+sleep(2)
+tello.takeoff() 
+
 tello.move_up(76)
 
-tello.move_forward(305)
-tello.move_right(305)
-tello.back(305)
-tello.move_left(305)
-tello.flip_forward()
+sleep(2) 
+tello.move_forward(305) 
 
+sleep(2)
+tello.move_right(305) 
+
+sleep(2)
+tello.move_back(305) 
+
+sleep(2)
+tello.move_left(305)
+
+sleep(2)
+tello.flip_forward()
 tello.land()
 tello.end()
